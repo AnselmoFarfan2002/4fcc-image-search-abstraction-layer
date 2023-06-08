@@ -1,0 +1,36 @@
+html 
+    head 
+        title Image search abstract layer
+
+    body(style="display:flex; flex-direction: column; align-items: center; justify-content: center; min-width: 100vw; min-height: 100vh; margin: 0")
+        h1(style="margin-top:0") Image search abstraction layer
+        hr(style="width: 70%")
+
+        p Search trought pexels server for images or see recent searches
+
+        fieldset 
+            legend Look the history
+            a(href="/recent") #{host}/recent 
+
+        br
+
+        fieldset 
+            legend Perform a query
+            label(for="query") Query: 
+            input#query(type="text" name="query")
+            br
+
+            label(for="page") Page: 
+            input#page(type="number" name="page" min="1")
+
+            p
+                i Link of query 
+            a#queryLink(href="") #{host}
+        
+        p Powered by 
+            a(href="https://www.pexels.com/") @Pexels
+        
+        p(style="margin: 0") Developed by 
+            a(href="https://www.linkedin.com/in/anselmo-c%C3%A9sar-farfan-pajuelo-7b9b6724b/") @AnselmoFarfan2002
+
+        script(type="text/javascript" src="index.js")
